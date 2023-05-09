@@ -26,7 +26,7 @@ class Post(models.Model):
     )
 
     class Meta:
-        ordering = ['-pub_date']
+        ordering = ['pub_date']
         verbose_name = 'Пост'
         verbose_name_plural = 'Посты'
 
@@ -50,3 +50,26 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
+
+
+class Follow(models.Model):
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='follower',
+        null=True,
+    )
+    following = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='following',
+        null=True,
+    )
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['user', 'following'],
+                name='unique_user_following'
+            )
+        ]
