@@ -1,6 +1,6 @@
 # Api Yatube
 ## Технологии
-- Python 3.8
+- Python 3.9
 - Django 3.2.16
 - Djoser 2.2.0
 - Django REST framework 3.12.4
