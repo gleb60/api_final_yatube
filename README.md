@@ -21,12 +21,19 @@ git clone git@github.com:gleb60/api_final_yatube.git
 cd kittygram
 ```
 
-Cоздать и активировать виртуальное окружение:
+Cоздать виртуальное окружение на Linux:
 
 ```
-python3 -m venv env
+python3 -m venv venv
 ```
 
+Или на Windows:
+
+```
+python -m venv venv
+```
+
+И активировать виртуальное окружение:
 ```
 source .venv/bin/activate
 ```
