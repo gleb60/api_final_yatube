@@ -33,11 +33,14 @@ python3 -m venv venv
 python -m venv venv
 ```
 
-И активировать виртуальное окружение:
+И активировать виртуальное окружение на Linux:
 ```
-source .venv/bin/activate
+. venv/bin/activate
 ```
-
+Или на Windows:
+```
+source venv/Scripts/activate
+```
 Установить зависимости из файла requirements.txt:
 
 ```
